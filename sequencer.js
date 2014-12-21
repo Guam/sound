@@ -32,7 +32,7 @@ pc.script.create('sequencer', function (context) {
         initialize: function () {
             
             alert(this.entity.script);
-            this.worker = new Worker('worker.js');
+            this.worker = new Worker('https://raw.githubusercontent.com/Guam/sound/master/worker.js');
             this.worker.onmessage = function(e) {
                 if (e.data == "tick") {
                     alert(e.data);
