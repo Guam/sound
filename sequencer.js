@@ -32,7 +32,7 @@ pc.script.create('sequencer', function (context) {
         initialize: function () {
             
             alert(this.entity.script);
-            this.worker = new Worker(this.entity.script.worker);
+            this.worker = new Worker('worker.js');
             this.worker.onmessage = function(e) {
                 if (e.data == "tick") {
                     alert(e.data);
